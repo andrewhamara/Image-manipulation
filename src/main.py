@@ -2,6 +2,7 @@ import sys
 from PIL import Image
 from manipulation.grayscale import grayscale
 from manipulation.red_to_blue import red_to_blue
+from manipulation.yellow_to_blue import yellow_to_blue
 
 def main():
     filename = sys.argv[1]
@@ -21,6 +22,8 @@ def main():
                 image = grayscale(image)
             case '-r2b':
                 image = red_to_blue(image)
+            case '-y2b':
+                image = yellow_to_blue(image)
 
     image.save('updated.jpg')
 
