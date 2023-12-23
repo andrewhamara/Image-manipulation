@@ -1,6 +1,3 @@
-from PIL import Image
-
-def grayscale(path : str):
-    image = Image.open(path)
+def grayscale(image):
     bw = image.convert('L')
-    bw.save('black_and_white.jpg')
+    return bw
